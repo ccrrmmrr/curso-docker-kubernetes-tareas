@@ -96,17 +96,20 @@ docker build -t mi-app-python:2.0 .
 ## Testing
 
 ### Comandos para ejecutar el container
-\`\`\`bash
+\`\`\`bashhttps://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase2/screenshots/docker_ps.PNG
 # Ejecutar contenedor
 docker run -d -p 8000:8000 --name python-app mi-app-python:2.0
 
 # Verificar que está corriendo
 docker ps
 
-# Probar endpoints
-curl http://localhost:8003/health
-curl http://localhost:8003/api/status
-curl http://localhost:8003/api/info
+## Endpoints de Verificación
+
+| Endpoint | Comando | Descripción |
+|----------|---------|-------------|
+| **Health Check** | `curl http://localhost:8003/health` | Verifica estado general del servicio |
+| **API Status** | `curl http://localhost:8003/api/status` | Obtiene estado de la API |
+| **API Info** | `curl http://localhost:8003/api/info` | Obtiene información general de la API |
 
 # Ver logs
 docker logs python-app
@@ -116,23 +119,18 @@ docker exec python-app whoami
 \`\`\`
 
 ### Screenshots
-- [Docker Images](screenshots/docker_images.Png)
-- [Container Running](screenshots/docker_ps.Png) 
-- [Health Check Response](screenshots/EP_03.Png)
-- [API Status Response](screenshots/EP_02.Png)
-- [API Status Response](screenshots/EP_01.Png)
-- [Phyton-app](screenshots/phyton-app.Png)
-- [Application Logs](screenshots/docker_logs.Png)
+- [Docker Images](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase2/screenshots/docker_images.PNG)
+- [Container Running](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase2/screenshots/docker_ps.Png) 
+- [Health Check Response](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase2/screenshots/EP_03.Png)
+- [API Status Response](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase2/screenshots/EP_02.Png)
+- [API Status Response](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase2/screenshots/EP_01.Png)
+- [Phyton-app](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase2/screenshots/phyton-app.Png)
+- [Application Logs](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase2/screenshots/docker_logs.Png)
 
 ## Docker Hub
 
-**URL:** https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main?tab=readme-ov-file
+**URL:** https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas
 
-**Comandos de publicación:**
-\`\`\`bash
-docker tag mi-app-python:2.0 tu-usuario/mi-app-python:2.0
-docker push tu-usuario/mi-app-python:2.0
-\`\`\`
 
 ## Optimizaciones
 
