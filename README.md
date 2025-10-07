@@ -8,6 +8,6 @@ Carlos Roberto Martinez Rivadeneira
 
 ## Índice con enlaces a cada clase
 - [Clase 1](./clase1/README.md)
-- Clase 2 (Próximamente)
+- [Clase 2](./clase2/README.md)
 - Clase 3 (Próximamente)
 - Clase 4 (Próximamente)
