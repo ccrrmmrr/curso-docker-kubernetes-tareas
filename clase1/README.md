@@ -1,4 +1,12 @@
-# Clase 1: Parte 2: Desafío Técnico con Docker - Apache HTTP Server
+# Tarea 1 - Configuración de Repositorio y Primer Desafío
+
+# Parte 1: Configuración de Repositorio
+
+## ✅ Estado del Ejercicio: COMPLETADO
+
+### Estructura Implementada:
+
+# Parte 2: Desafío Técnico con Docker - Apache HTTP Server
 
 ## Documentación Requerida
 

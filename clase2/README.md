@@ -1,4 +1,5 @@
-# Clase 2 - Docker Multi-Stage Build con Python/FastAPI
+# Tarea 2 - Dockerizar Aplicación con Multi-Stage Build
+# Caso - Docker Multi-Stage Build con Python/FastAPI
 
 ## Aplicación
 
