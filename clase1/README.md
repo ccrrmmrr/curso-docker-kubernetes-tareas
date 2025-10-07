@@ -23,15 +23,19 @@ docker logs mi-apache
 
 ### 4. Limpieza
 
-# Detener container
+## Detener container
 docker stop mi-apache
 
-# Eliminar container
+## Eliminar container
 docker rm mi-apache
 
-# Verificar que ya no existe
+## Verificar que ya no existe
 docker ps -a
 
+### 5. Screenshots
+- [Apache-browser](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase1/screenshots/apache-browser.PNG)
+- [docker-ps-after-cleanup](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase1/screenshots/docker-ps-after-cleanup.PNG) 
+- [docker-ps-apache](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase1/screenshots/docker-ps-apache.PNG)
 
 ## Explicación de Flags
 
