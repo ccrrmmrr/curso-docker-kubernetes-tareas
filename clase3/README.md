@@ -1,7 +1,7 @@
 # Docker Compose Practice - Aplicación Multi-Contenedor
 
 **Curso:** Docker & Kubernetes - Clase 3
-**Estudiante:** Carlos Roberto MArtinez Rivadeneira
+**Estudiante:** Carlos Roberto Martinez Rivadeneira
 
 
 Aplicación multi-contenedor con frontend, backend API y base de datos PostgreSQL, demostrando orquestación con Docker Compose.
@@ -16,57 +16,58 @@ Aplicación multi-contenedor con frontend, backend API y base de datos PostgreSQ
 ## Ejecución
 
 1. Clonar:
-\`\`\`bash
-git clone https://github.com/ccrrmmrr/docker-compose-practice.git
-cd docker-compose-practice
-\`\`\`
+
+    git clone `https://github.com/ccrrmmrr/docker-compose-practice.git`
+    cd docker-compose-practice
+
 
 2. Levantar servicios:
-\`\`\`bash
-docker compose up -d
-\`\`\`
+
+    docker compose up -d
+
 
 3. Acceder:
-- Frontend: http://localhost:8082
-- API: http://localhost:8001
-- API Docs: http://localhost:8001/docs
-- pgAdmin: http://localhost:8081
+- Frontend: `http://localhost:8082`
+- API: `http://localhost:8001`
+- API Docs: `http://localhost:8001/docs`
+- pgAdmin: `http://localhost:8081`
 
 ## Verificación
 
 1. Servicios corriendo:
-\`\`\`bash
-docker compose ps
-\`\`\`
 
-2. Acceder a la web: http://localhost:8082
+    docker compose ps
+
+
+2. Acceder a la web: 
+    `http://localhost:8082`
 
 3. Verificar volumen persiste:
-\`\`\`bash
-docker compose down
-docker compose up -d
-docker volume ls  # debe seguir existiendo
-\`\`\`
+
+    docker compose down
+    docker compose up -d
+    docker volume ls  # debe seguir existiendo
+
 
 ## Screenshots
 
 ### Servicios corriendo
-![Docker Compose PS](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase3/screenshots/docker_compose_ps.PNG)
+[Docker Compose PS](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase3/screenshots/docker_compose_ps.PNG)
 
 ### API funcionando
-![API Docs](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase3/screenshots/API_Docs.PNG)
+[API Docs](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase3/screenshots/API_Docs.PNG)
 
 ### Aplicación web funcionando
-![Frontend](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase3/screenshots/Frontend.PNG)
+[Frontend](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase3/screenshots/Frontend.PNG)
 
 ### Volumen persistente
-![Docker Volumes](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase3/screenshots/docker_volumes.PNG)
+[Docker Volumes](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase3/screenshots/docker_volumes.PNG)
 
 ### Red custom
-![Docker Network](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase3/screenshots/docker_network.PNG)
+[Docker Network](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase3/screenshots/docker_network.PNG)
 
 ### Comunicación entre servicios
-![Service Communication](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase3/screenshots/comun_servicios.PNG)
+[Service Communication](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase3/screenshots/comun_servicios.PNG)
 
 ## Conceptos Docker
 
@@ -78,7 +79,7 @@ docker volume ls  # debe seguir existiendo
 - **Comunicación entre servicios**: DNS interno y conectividad verificada
 
 ## Estructura del Proyecto
-\`\`\`
+
 docker-compose-practice/
 ├── docker-compose.yml
 ├── .env
@@ -100,32 +101,33 @@ docker-compose-practice/
     ├── docker-volumes.png
     ├── docker-network.png
     └── service-communication.png
-\`\`\`
+
 
 ## Comandos de Verificación Adicionales
 
 ### Verificar red custom:
-\`\`\`bash
+
 docker network ls
-\`\`\`
+
 
 ### Probar comunicación entre servicios:
-\`\`\`bash
-docker compose exec backend ping database
-\`\`\`
 
-### Verificar persistencia de datos:
-\`\`\`bash
-# Agregar dato de prueba
-curl -X POST http://localhost:8001/tasks \\
+docker compose exec backend ping database
+
+
+## Verificar persistencia de datos:
+
+### Agregar dato de prueba
+
+curl -X POST `http://localhost:8001/tasks` \\
   -H "Content-Type: application/json" \\
   -d '{"title": "Test persistencia", "description": "Dato de prueba"}'
 
-# Reiniciar y verificar
-docker compose down
-docker compose up -d
-curl http://localhost:8001/tasks
-\`\`\`
+### Reiniciar y verificar
+    docker compose down
+    docker compose up -d
+    curl http://localhost:8001/tasks
+
 
 ---
 
