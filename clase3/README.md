@@ -80,7 +80,7 @@ Aplicación multi-contenedor con frontend, backend API y base de datos PostgreSQ
 - **Comunicación entre servicios**: DNS interno y conectividad verificada
 
 ## Estructura del Proyecto
-
+```bash
 docker-compose-practice/
 ├── docker-compose.yml
 ├── .env
@@ -102,7 +102,7 @@ docker-compose-practice/
     ├── docker-volumes.png
     ├── docker-network.png
     └── service-communication.png
-
+```
 
 ## Comandos de Verificación Adicionales
 
