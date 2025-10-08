@@ -1,6 +1,7 @@
-# Docker Compose Practice - Aplicación Multi-Contenedor
+# Tarea 3 - Aplicación Multi-Contenedor con Docker Compose
 
 **Curso:** Docker & Kubernetes - Clase 3
+
 **Estudiante:** Carlos Roberto Martinez Rivadeneira
 
 
