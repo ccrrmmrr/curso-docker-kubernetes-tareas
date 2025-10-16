@@ -1,5 +1,4 @@
-# 🧩 Seguridad y Optimización de imágenes
-# Caso: Aplicación Node.js Ultra Optimizada
+# 🧩 Tarea5. Seguridad y Optimización de imágenes
 
 ## 📋 Descripción
 Aplicación Node.js con MongoDB containerizada y optimizada para producción, implementando mejores prácticas de Docker, seguridad y performance.
@@ -138,7 +137,7 @@ Desarrollar una imagen Docker ultra-optimizada, segura y eficiente que minimice 
 
 ```bash
 # 1. Clonar repositorio
-git clone https://github.com/tu-usuario/mi-app-docker
+git clone https://github.com/ccrrmmrr/mi-app-docker
 cd mi-app-docker
 
 # 2. Construir imagen optimizada
