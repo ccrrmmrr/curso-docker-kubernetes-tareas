@@ -246,7 +246,7 @@ Cart API through gateway
 curl http://localhost:8080/api/cart
 ```
 
-## Capturas de Pantalla
+## 📸 7. Capturas de Pantalla
 
 - [Frontend funcionando](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase4/screenshots/FrontEnd.PNG)
 - [Resultado de docker compose ps](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase4/screenshots/docker_compose_ps.PNG)
