@@ -246,3 +246,9 @@ Cart API through gateway
 curl http://localhost:8080/api/cart
 ```
 
+## Capturas de Pantalla
+
+- [Frontend funcionando](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase4/screenshots/FrontEnd.PNG)
+- [Resultado de docker compose ps](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase4/screenshots/docker_compose_ps.PNG)
+- [Conexion Postgres](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase4/screenshots/postgres.PNG)
+- [Logs mostrando conexión a Redis](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase4/screenshots/logs_all.PNG)
