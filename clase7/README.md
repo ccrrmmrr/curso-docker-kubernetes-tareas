@@ -1,6 +1,9 @@
+# Tarea 7. Namespaces, Configuración y Persistencia
 # Task Manager Kubernetes - Aplicación de 2 Capas
 
 Aplicación completa de gestión de tareas con backend Node.js + PostgreSQL, desplegada en Kubernetes con arquitectura de 2 capas.
+Curso: Docker & Kubernetes - Clase 3
+Estudiante: Carlos Roberto Martinez Rivadeneira
 
 ## 🏗️ Arquitectura del Sistema
 
