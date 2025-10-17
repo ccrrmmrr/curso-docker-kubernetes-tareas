@@ -59,10 +59,10 @@ O usar: minikube service webapp-service
 ## Screenshots
 
 ### Recursos desplegados
--[kubectl get all](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase6/screenshots/resources.png)
+-[kubectl get all](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase6/screenshots/resources.PNG)
 
 ### Aplicación funcionando
--[webapp](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase6/screenshots/aplicacion.png)
+-[webapp](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase6/screenshots/aplicacion.PNG)
 
 ### Escalado a 3 réplicas
--[scaling](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/tree/main/clase6/screenshots/scaling.png)
+-[scaling](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase6/screenshots/scaling.PNG)
