@@ -109,32 +109,32 @@ kubectl get all
 kubectl get pods -l app=api-backend
 kubectl get pods -l app=postgres
 ```
-# Ver servicios
+### Ver servicios
 ```bash
 kubectl get services
 Probar Endpoints de la API
 ```
-# Health check
+### Health check
 ```bash
 curl http://localhost:8080/api/health
 ```
-# Listar tareas
+### Listar tareas
 ```bash
 curl http://localhost:8080/api/tareas
 ```
-# Crear nueva tarea
+### Crear nueva tarea
 ```bash
 curl -X POST http://localhost:8080/api/tareas \
   -H "Content-Type: application/json" \
   -d '{"titulo": "Mi nueva tarea desde Kubernetes"}'
 ```
-### Escalar la Aplicación
+## Escalar la Aplicación
 
-# Escalar backend a 3 réplicas
+### Escalar backend a 3 réplicas
 ```bash
 kubectl scale deployment api-backend --replicas=3
 ```
-# Verificar el escalado
+### Verificar el escalado
 ```bash
 kubectl get pods -l app=api-backend
 Verificar Base de Datos
