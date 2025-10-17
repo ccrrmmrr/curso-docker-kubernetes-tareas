@@ -12,6 +12,6 @@ Carlos Roberto Martinez Rivadeneira
 - [Clase 3](./clase3/README.md)
 - [Clase 4](./clase4/README.md)
 - [Clase 5](./clase5/README.md)
-- Clase 6 (Próximamente)
-- Clase 7 (Próximamente)
+- [Clase 6](./clase6/README.md)
+- [Clase 7](./clase7/README.md)
 - Clase 8 (Próximamente)
