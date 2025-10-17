@@ -67,3 +67,100 @@ task-manager-kubernetes/
 └── README.md                     # Este archivo
 ```
 
+## 🚀 Cómo Ejecutar
+### 1. Clonar y Entrar al Directorio
+```bash
+git clone https://github.com/ccrrmmrr/task-manager-kubernetes.git
+cd task-manager-kubernetes
+```
+
+### 2. Desplegar la Aplicación
+```bash
+# Aplicar ConfigMaps y Secrets
+kubectl apply -f k8s/configs.yaml
+
+# Desplegar PostgreSQL con StatefulSet
+kubectl apply -f k8s/postgres-statefulset-fixed.yaml
+
+# Desplegar Backend API
+kubectl apply -f manifests/api-deployment-fixed.yaml
+kubectl apply -f manifests/services.yaml
+```
+
+### 3. Acceder a la Aplicación
+```bash
+# Opción 1: Port-forward
+kubectl port-forward service/api-service 8080:80
+
+# Opción 2: Minikube service
+minikube service api-service --url
+
+# URL: http://localhost:8080
+```
+
+## ✅ Cómo Probar
+### Verificación de Recursos
+```bash
+# Ver todos los recursos desplegados
+kubectl get all
+
+# Ver pods específicos
+```bash
+kubectl get pods -l app=api-backend
+kubectl get pods -l app=postgres
+```
+# Ver servicios
+```bash
+kubectl get services
+Probar Endpoints de la API
+```
+# Health check
+```bash
+curl http://localhost:8080/api/health
+```
+# Listar tareas
+```bash
+curl http://localhost:8080/api/tareas
+```
+# Crear nueva tarea
+```bash
+curl -X POST http://localhost:8080/api/tareas \
+  -H "Content-Type: application/json" \
+  -d '{"titulo": "Mi nueva tarea desde Kubernetes"}'
+```
+### Escalar la Aplicación
+
+# Escalar backend a 3 réplicas
+```bash
+kubectl scale deployment api-backend --replicas=3
+```
+# Verificar el escalado
+```bash
+kubectl get pods -l app=api-backend
+Verificar Base de Datos
+```
+## 🔧 Componentes Kubernetes
+### ConfigMaps
+```bash
+postgres-config: Configuración de la base de datos
+
+api-config: Variables de entorno del backend
+```
+### Secrets
+```bash
+postgres-secret: Credenciales de PostgreSQL
+```
+### StatefulSet
+```bash
+postgres: Base de datos con almacenamiento persistente
+```
+### Deployment
+```bash
+api-backend: Backend API con 2 réplicas
+```
+### Services
+```bash
+api-service: NodePort para acceso externo
+
+postgres-headless: Servicio interno para PostgreSQL
+```
