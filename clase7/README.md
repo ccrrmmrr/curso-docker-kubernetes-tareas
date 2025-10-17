@@ -55,7 +55,6 @@ Aplicación completa de gestión de tareas con backend Node.js + PostgreSQL, des
 
 ## 🗂️ Estructura del Proyecto
 
-```bash
 task-manager-kubernetes/
 ├── k8s/
 │   ├── configs.yaml              # ConfigMaps y Secrets
