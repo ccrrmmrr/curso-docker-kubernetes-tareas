@@ -167,3 +167,14 @@ api-service: NodePort para acceso externo
 
 postgres-headless: Servicio interno para PostgreSQL
 ```
+
+## Capturas de Pantalla
+
+### Recursos desplegados
+- [kubectl get all](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase7/screenshots/resources.PNG)
+
+### Aplicación funcionando
+- [App](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase7/screenshots/aplicacion.PNG)
+
+### Health
+- [Health_check](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase7/screenshots/health_check.PNG)
