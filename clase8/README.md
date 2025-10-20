@@ -1,4 +1,7 @@
-# Kubernetes Two-Tier Application
+# Tarea 8: Ingress, Health Probes y Escalado Automático
+---
+
+## Kubernetes Two-Tier Application
 
 Despliegue de una aplicación de 2 capas en Kubernetes con configuraciones de producción.
 
@@ -15,7 +18,7 @@ Despliegue de una aplicación de 2 capas en Kubernetes con configuraciones de pr
 - **HPA**: Horizontal Pod Autoscaler para auto-scaling
 - **Resource Management**: Limits y requests para resource optimization
 
-## 🚀 Instrucciones de Despliegue
+## Instrucciones de Despliegue
 
 ### Prerrequisitos
 - Minikube instalado y configurado
@@ -28,7 +31,7 @@ minikube addons enable ingress
 minikube addons enable metrics-server
 ```
 ### 2. Aplicar Manifest de Kubernetes
-
+```bash
 # Aplicar todos los recursos
 kubectl apply -f k8s/
 
@@ -39,9 +42,10 @@ kubectl apply -f k8s/backend-deployment.yaml
 kubectl apply -f k8s/backend-service.yaml
 kubectl apply -f k8s/ingress.yaml
 kubectl apply -f k8s/hpa.yaml
+```
 
 ### 3. Verificar Recursos Desplegados
-
+```bash
 # Ver estado general
 kubectl get all
 
@@ -52,9 +56,10 @@ kubectl get pods -l app=backend
 # Esperar a que los pods estén ready
 kubectl wait --for=condition=ready pod -l app=frontend --timeout=60s
 kubectl wait --for=condition=ready pod -l app=backend --timeout=60s
+```
 
 ### 4. Probar Ingress
-
+```bash
 # Obtener IP del Ingress
 kubectl get ingress app-ingress
 
@@ -63,9 +68,10 @@ minikube tunnel
 # En otra terminal:
 curl http://192.168.49.2/
 curl http://192.168.49.2/api/
+```
 
 ### 5. Probar HPA con Carga
-
+```bash
 # Monitorear HPA
 kubectl get hpa backend-hpa --watch
 
@@ -75,9 +81,10 @@ kubectl run load-generator --image=busybox:1.28 --rm -it --restart=Never -- \
 
 # Monitorear escalado de pods
 kubectl get pods -l app=backend --watch
+```
 
 ## Estructura de directorios
-
+```bash
 kubernetes-two-tier-app/
 ├── k8s/
 │   ├── frontend-deployment.yaml
@@ -93,40 +100,43 @@ kubernetes-two-tier-app/
 │   ├── hpa-scaling.png
 │   └── pods-scaled.png
 └── README.md
+```
 
 ## Comandos de Verificación
 ### Estado General del Cluster
-
+```bash
 kubectl get all
+```
 
 ### Verificar Ingress
-
+```bash
 kubectl get ingress
 kubectl describe ingress app-ingress
-
+```
 
 ### Verificar HPA
-
+```bash
 kubectl get hpa
 kubectl describe hpa backend-hpa
-
+```
 
 ### Verificar Métricas
-
+```bash
 kubectl top pods
 kubectl top nodes
-
+```
 
 ### Verificar Health Probes
-
+```bash
 kubectl describe pod -l app=backend | grep -A 5 "Liveness\|Readiness"
 kubectl logs -l app=backend --tail=10
+```
 
 ### Verificar Services y Endpoints
-
+```bash
 kubectl get services
 kubectl get endpoints
-
+```
 ## Capturas de pantalla
 
 - [Ingress funcionando](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase8/screenshots/ingress-functioning.png)
