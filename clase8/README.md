@@ -1,5 +1,4 @@
 # Tarea 8: Ingress, Health Probes y Escalado Automático
----
 
 ## Kubernetes Two-Tier Application
 
@@ -18,12 +17,21 @@ Despliegue de una aplicación de 2 capas en Kubernetes con configuraciones de pr
 - **HPA**: Horizontal Pod Autoscaler para auto-scaling
 - **Resource Management**: Limits y requests para resource optimization
 
+## Cómo ejecutar
+### Clonar y Entrar al Directorio
+```bash
+git clone https://github.com/ccrrmmrr/kubernetes-two-tier-app.git
+cd kubernetes-two-tier-app
+```
+
+
 ## Instrucciones de Despliegue
 
 ### Prerrequisitos
 - Minikube instalado y configurado
 - kubectl configurado
 - Docker (opcional, dependiendo del driver)
+
 
 ### 1. Habilitar Addons Requeridos
 ```bash
@@ -146,28 +154,4 @@ kubectl get endpoints
 - [Pods escalados](https://github.com/ccrrmmrr/curso-docker-kubernetes-tareas/blob/main/clase8/screenshots/pods-scaled.png)
 
 
-### 1. Ingress Funcionando
-
-kubectl get ingress
-# Debe mostrar ADDRESS asignado (ej: 192.168.49.2)
-
-### 2. Health Probes Configurados
-
-kubectl describe pod -l app=backend
-# Buscar secciones Liveness y Readiness
-
-### 3. HPA en Reposo
-
-kubectl get hpa backend-hpa
-# Debe mostrar TARGETS 0%/50% o similar
-
-### 4. HPA Escalando Bajo Carga
-
-kubectl get hpa backend-hpa --watch
-# Durante carga debe mostrar TARGETS >50%
-
-### 5. Pods Escalados
-
-kubectl get pods -l app=backend
-# Debe mostrar incremento de 2 a 4-5 pods
  
